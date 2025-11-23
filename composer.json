@@ -1,0 +1,17 @@
+{
+    "name": "hexlet/code",
+    "description": "My first project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ivan Gerasimov",
+            "email": "pqlilpd@gmail.com"
+        }
+    ],
+    "require": {}
+}
