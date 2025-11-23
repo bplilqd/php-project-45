@@ -2,6 +2,7 @@
     "name": "hexlet/code",
     "description": "My first project",
     "type": "project",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -12,6 +13,9 @@
             "name": "Ivan Gerasimov",
             "email": "pqlilpd@gmail.com"
         }
+    ],
+    "bin": [
+        "bin/brain-games"
     ],
     "require": {}
 }
