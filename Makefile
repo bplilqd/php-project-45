@@ -4,3 +4,5 @@ brain-games: # Запуск php old comand bin/brain-games.php
 	./bin/brain-games
 validate: # make validate выполнит composer validate
 	composer validate
+lint: # Проверка кода (линтер) по стандарту PSR12
+	composer exec --verbose phpcs -- --standard=PSR12 src bin
