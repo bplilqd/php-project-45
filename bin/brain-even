@@ -5,5 +5,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\welcome;
+use function BrainEven\Even\question;
 
 $name = welcome();
+question($name);
