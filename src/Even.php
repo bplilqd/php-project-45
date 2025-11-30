@@ -5,18 +5,43 @@ namespace BrainEven\Even;
 use function cli\line;
 use function cli\prompt;
 
-function question($name): void
+function question(string $name): void
 {
-    $number = mt_rand(0, 99);
-    $goodbay = "Answer 'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, " . $name;
-    $correct = "Correct!";
-    $congratulations = "Congratulations, " . $name;
+    $roundsCount = 3;
+
     line('Answer "yes" if the number is even, otherwise answer "no".');
-    // for from thre
-    $answer = prompt("Question: {$number}\nYour answer:");
+
+    for ($i = 0; $i < $roundsCount; $i++) {
+        $number = mt_rand(0, 99);
+
+        line("Question: {$number}");
+        $answer = prompt('Your answer');
+
+        $correctAnswer = checkToEven($number) ? 'yes' : 'no';
+
+        if (!checkAnswer($correctAnswer, $answer, $name)) {
+            // Неправильный ответ — игра закончена
+            return;
+        }
+    }
+
+    line("Congratulations, {$name}!");
 }
 
-function checkToEven($number): bool
+function checkAnswer(string $correct, string $answer, string $name): bool
 {
-    return ($number % 2 === 0) ?? false;
+    if ($answer === $correct) {
+        line('Correct!');
+        return true;
+    }
+
+    line("'{$answer}' is wrong answer ;(. Correct answer was '{$correct}'.");
+    line("Let's try again, {$name}!");
+
+    return false;
+}
+
+function checkToEven(int $number): bool
+{
+    return $number % 2 === 0;
 }
