@@ -4,6 +4,7 @@ namespace BrainEven\Even;
 
 use function cli\line;
 use function cli\prompt;
+use function FunctionLogic\Logic\EchoIsWrongAnswer;
 
 function question(string $name): void
 {
@@ -35,8 +36,7 @@ function checkAnswer(string $correct, string $answer, string $name): bool
         return true;
     }
 
-    line("'{$answer}' is wrong answer ;(. Correct answer was '{$correct}'.");
-    line("Let's try again, {$name}!");
+    EchoIsWrongAnswer($answer, $correct, $name);
 
     return false;
 }
