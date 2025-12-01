@@ -3,3 +3,11 @@
 <?php
 
 require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Games\Cli\welcome;
+use function BrainCalc\Games\Calc\question;
+
+$arrayMethods = ['*', '-', '+'];
+
+$name = welcome();
+question($name, $arrayMethods);

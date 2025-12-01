@@ -4,7 +4,8 @@ namespace BrainEven\Games\Even;
 
 use function cli\line;
 use function cli\prompt;
-use function FunctionLogic\Logic\EchoIsWrongAnswer;
+use function FunctionLogic\Logic\checkAnswer;
+use function FunctionLogic\Logic\checkToEven;
 
 function question(string $name): void
 {
@@ -27,21 +28,4 @@ function question(string $name): void
     }
 
     line("Congratulations, {$name}!");
-}
-
-function checkAnswer(string $correct, string $answer, string $name): bool
-{
-    if ($answer === $correct) {
-        line('Correct!');
-        return true;
-    }
-
-    EchoIsWrongAnswer($answer, $correct, $name);
-
-    return false;
-}
-
-function checkToEven(int $number): bool
-{
-    return $number % 2 === 0;
 }
