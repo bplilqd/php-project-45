@@ -8,8 +8,8 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/Cli.php",
-            "src/Even.php",
+            "src/Games/Cli.php",
+            "src/Games/Even.php",
             "src/Engine.php",
             "src/Calc.php"
         ]
