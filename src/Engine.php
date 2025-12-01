@@ -3,7 +3,6 @@
 namespace FunctionLogic\Logic;
 
 use function cli\line;
-//use function cli\prompt;
 
 function EchoIsWrongAnswer($answer, $correct, $name): void
 {
