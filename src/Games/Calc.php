@@ -47,8 +47,8 @@ function question(string $name, array $arrayMethods): void
 
 function questionOnSumm(array $arrayMethods): array
 {
-    $first_number = mt_rand(0, 10);
-    $second_number = mt_rand(0, 10);
+    $first_number = random_int(0, 10);
+    $second_number = random_int(0, 10);
     $method = $arrayMethods[mt_rand(0, 2)];
     return [$first_number, $method, $second_number];
 }

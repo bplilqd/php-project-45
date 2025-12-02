@@ -14,7 +14,7 @@ function question(string $name): void
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
     for ($i = 0; $i < $roundsCount; $i++) {
-        $number = mt_rand(0, 99);
+        $number = random_int(0, 99);
 
         line("Question: {$number}");
         $answer = prompt('Your answer');

@@ -12,8 +12,8 @@ function question(string $name): void
     line('Find the greatest common divisor of given numbers.');
 
     for ($i = 0; $i < $roundsCount; $i++) {
-        $number = mt_rand(0, 999);
-        $number2 = mt_rand(0, 999);
+        $number = random_int(0, 999);
+        $number2 = random_int(0, 999);
 
         line("Question: {$number} {$number2}");
         $answer = prompt('Your answer');
