@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Games\Cli\welcome;
+use function BrainGcd\Games\Hcf\question;
+
+$name = welcome();
+question($name);
