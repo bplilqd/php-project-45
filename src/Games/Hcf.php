@@ -1,6 +1,7 @@
 <?php
 
 namespace BrainGcd\Games\Hcf;
+
 use function cli\line;
 use function cli\prompt;
 use function FunctionLogic\Logic\checkAnswer;

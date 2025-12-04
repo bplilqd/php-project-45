@@ -12,3 +12,5 @@ brain-calc:		# Запуск php игры
 	./bin/brain-calc
 brain-gcd:		# Запуск php игры
 	./bin/brain-gcd
+brain-progression:		# Запуск php игры
+	./bin/brain-progression
