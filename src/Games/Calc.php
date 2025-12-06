@@ -6,18 +6,18 @@ use function cli\line;
 use function cli\prompt;
 use function FunctionLogic\Logic\checkAnswer;
 
-function multiplyMinusAdd(int $first_number, string $Methods, int $second_number): int
+function multiplyMinusAdd(int $firstNumber, string $Methods, int $secondNumber): int
 {
     $answer = 0;
     switch ($Methods) {
         case '+':
-            $answer = $first_number + $second_number;
+            $answer = $firstNumber + $secondNumber;
             break;
         case '-':
-            $answer = $first_number - $second_number;
+            $answer = $firstNumber - $secondNumber;
             break;
         case '*':
-            $answer = $first_number * $second_number;
+            $answer = $firstNumber * $secondNumber;
             break;
     }
     return $answer;
@@ -47,8 +47,8 @@ function question(string $name, array $arrayMethods): void
 
 function questionOnSumm(array $arrayMethods): array
 {
-    $first_number = random_int(0, 10);
-    $second_number = random_int(0, 10);
+    $firstNumber = random_int(0, 10);
+    $secondNumber = random_int(0, 10);
     $method = $arrayMethods[random_int(0, 2)];
-    return [$first_number, $method, $second_number];
+    return [$firstNumber, $method, $secondNumber];
 }

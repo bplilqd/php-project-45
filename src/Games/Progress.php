@@ -8,19 +8,19 @@ use function FunctionLogic\Logic\checkAnswer;
 
 function elemetsForProgress(): array
 {
-    $LongValueProgress = random_int(5, 10);
-    $secretValueKey = random_int(0, $LongValueProgress);
+    $longValueProgress = random_int(5, 10);
+    $secretValueKey = random_int(0, $longValueProgress);
     $progressValue = random_int(2, 9); // шаг прогрессии
     $startValue  = random_int(0, 25);
-    return [$LongValueProgress, $secretValueKey, $progressValue, $startValue];
+    return [$longValueProgress, $secretValueKey, $progressValue, $startValue];
 }
 
 function creatingProgressArray(array $array): array
 {
     $arrayResult = [];
-    [$LongValueProgress, $secretValueKey, $progressValue, $startValue] = $array;
+    [$longValueProgress, $secretValueKey, $progressValue, $startValue] = $array;
     $value = $startValue;
-    for ($i = 0; $i <= $LongValueProgress; $i++) {
+    for ($i = 0; $i <= $longValueProgress; $i++) {
         if ($i != $secretValueKey) {
             $arrayResult[] = $value;
         } else {
