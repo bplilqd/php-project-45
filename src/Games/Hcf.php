@@ -19,7 +19,7 @@ function question(string $name): void
         line("Question: {$number} {$number2}");
         $answer = prompt('Your answer');
 
-        $correctAnswer = (string) getValueHcf([$number, $number2]);
+        $correctAnswer = (string) getValueHcf($number, $number2);
 
         if (!checkAnswer($correctAnswer, $answer, $name)) {
             // Неправильный ответ — игра закончена
@@ -30,15 +30,12 @@ function question(string $name): void
     line("Congratulations, {$name}!");
 }
 
-function getValueHcf(array $arrayNumbers): int
+function getValueHcf(int $number, int $number2): int
 {
     $result = 0;
-    // Проверяем, что массив не пустой
-    if (empty($arrayNumbers)) {
-        return $result;
-    }
-    $numFirst = max($arrayNumbers);
-    $numSecond = min($arrayNumbers);
+
+    $numFirst = max($number, $number2);
+    $numSecond = min($number, $number2);
 
     if ($numFirst === 0 && $numSecond === 0) {
         return $result;
