@@ -34,7 +34,7 @@ function question(string $name, array $arrayMethods): void
         line("Question: {$resultArray[0]} {$resultArray[1]} {$resultArray[2]}");
         $answer = prompt('Your answer');
 
-        $correctAnswer = multiplyMinusAdd($resultArray[0], $resultArray[1], $resultArray[2]);
+        $correctAnswer = (string) multiplyMinusAdd($resultArray[0], $resultArray[1], $resultArray[2]);
 
         if (!checkAnswer($correctAnswer, $answer, $name)) {
             // Неправильный ответ — игра закончена

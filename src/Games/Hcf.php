@@ -19,7 +19,7 @@ function question(string $name): void
         line("Question: {$number} {$number2}");
         $answer = prompt('Your answer');
 
-        $correctAnswer = getValueHcf([$number, $number2]);
+        $correctAnswer = (string) getValueHcf([$number, $number2]);
 
         if (!checkAnswer($correctAnswer, $answer, $name)) {
             // Неправильный ответ — игра закончена

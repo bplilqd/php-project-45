@@ -21,7 +21,7 @@ function creatingProgressArray(array $array): array
     [$longValueProgress, $secretValueKey, $progressValue, $startValue] = $array;
     $value = $startValue;
     for ($i = 0; $i <= $longValueProgress; $i++) {
-        if ($i != $secretValueKey) {
+        if ($i !== $secretValueKey) {
             $arrayResult[] = $value;
         } else {
             $arrayResult[] = '..';
