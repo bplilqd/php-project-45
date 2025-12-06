@@ -33,7 +33,10 @@ function question(string $name): void
 function getValueHcf(array $arrayNumbers): int
 {
     $result = 0;
-
+    // Проверяем, что массив не пустой
+    if (empty($arrayNumbers)) {
+        return $result;
+    }
     $numFirst = max($arrayNumbers);
     $numSecond = min($arrayNumbers);
 
