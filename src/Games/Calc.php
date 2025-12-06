@@ -6,10 +6,10 @@ use function cli\line;
 use function cli\prompt;
 use function FunctionLogic\Logic\checkAnswer;
 
-function multiplyMinusAdd(int $firstNumber, string $Methods, int $secondNumber): int
+function multiplyMinusAdd(int $firstNumber, string $methods, int $secondNumber): int
 {
     $answer = 0;
-    switch ($Methods) {
+    switch ($methods) {
         case '+':
             $answer = $firstNumber + $secondNumber;
             break;
