@@ -4,7 +4,7 @@ namespace FunctionLogic\Logic;
 
 use function cli\line;
 
-function EchoIsWrongAnswer($answer, $correct, $name): void
+function echoIsWrongAnswer($answer, $correct, $name): void
 {
     line("'{$answer}' is wrong answer ;(. Correct answer was '{$correct}'.");
     line("Let's try again, {$name}!");
@@ -22,7 +22,7 @@ function checkAnswer(string $correct, string $answer, string $name): bool
         return true;
     }
 
-    EchoIsWrongAnswer($answer, $correct, $name);
+    echoIsWrongAnswer($answer, $correct, $name);
 
     return false;
 }
